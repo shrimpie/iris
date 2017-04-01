@@ -3,7 +3,6 @@
 require("should");
 
 const config = require("../../config");
-
 const WitClient = require("../../server/witClient");
 
 describe("witClient", () => {
@@ -22,7 +21,7 @@ describe("witClient", () => {
 
                 return done();
             });
-        });
+        }).timeout(5000);
     });
 });
 
