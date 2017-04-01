@@ -3,12 +3,12 @@
 const express = require('express');
 const service = express();
 const ServiceRegistry = require('./serviceRegistry');
-const serviceRegistry = new ServiceRegistry();
 
 module.exports = (config) => {
+
+    const serviceRegistry = new ServiceRegistry(config.serviceTimeout);
     
     service.set('serviceRegistry', serviceRegistry);
-
     service.put('/service/:intent/:port', (req, res, next) => {
         const serviceIntent = req.params.intent;
         const servicePort = req.params.port;
