@@ -1,28 +1,35 @@
-{
-  "name": "iris",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/service.js",
-  "scripts": {
+    {
+    "name": "iris",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/service.js",
+    "scripts": {
     "test": "NODE_ENV=test eslint bin server & nyc mocha --recursive test",
     "start": "node bin/run"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    },
+    "engines": {
+        "node": "6.9.5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yangshrimpie/iris.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
     "@slack/client": "^3.6.0",
     "bunyan": "^1.8.9",
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "superagent": "^2.2.0",
     "supertest": "^3.0.0"
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.1",
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
     "should": "^11.2.1",
     "superagent": "^2.3.0"
-  }
-}
+    }
+    }
